@@ -1,21 +1,45 @@
 * {
   background: #16161a;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
 }
 
 #app {
-  justify-content: center;
+  height: 95vh;
+  margin-top: 20px;
+  justify-content: space-around;
+  align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
+.title {
+  font-size: 4rem;
+  color: #7f4ff0;
+  padding: 2rem;
+  margin-bottom: 5rem;
+}
+
+.control {
+  justify-content: flex-start;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mb {
+  margin-bottom: 1rem;
+}
+
 .button {
-  width: calc(90vh + 2px);
+  /* width: calc(90vh + 2px); */
   height: 30px;
   border: none;
   border: 1px solid #72757e;
   background: #7f5af0;
   color: #fffffe;
+  /* margin-bottom: 1rem; */
 }
 
 .button:hover {
@@ -34,6 +58,110 @@
   background-color: #fffffe;
 }
 
+.reset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reset-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.reset-p {
+  color: #fffffe;
+}
+
+.color {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hover {
   background: #16161a;
+}
+
+.toggle {
+  border: 1px solid #7f4ff0;
+}
+
+#color {
+  margin-left: 10px;
+  background: #7f4ff0;
+}
+
+input[type='range'] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type='range']:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type='range']::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #fffffe;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #7f4ff0;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type='range']::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #fffffe;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #7f4ff0;
+  cursor: pointer;
+}
+
+/* trail  */
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #fffffe;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type='range']:focus::-webkit-slider-runnable-track {
+  background: #7f5af0;
+}
+
+input[type='range']::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #fffffe;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
 }
