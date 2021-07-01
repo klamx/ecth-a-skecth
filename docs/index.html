@@ -5,12 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Ecth A Skecth</title>
-    <script type="module" crossorigin src="./assets/index.00550e20.js"></script>
-    <link rel="stylesheet" href="./assets/index.8406e0aa.css" />
+    <script type="module" crossorigin src="./assets/index.7fdc537f.js"></script>
+    <link rel="stylesheet" href="./assets/index.cb479261.css" />
   </head>
   <body>
     <div id="app">
-      <button id="clear" class="button">Clear</button>
+      <div class="control">
+        <div class="title">Ecth A Sketch</div>
+        <div class="button color mb">
+          Color select
+          <input type="color" name="color" id="color" />
+        </div>
+        <button id="toggle-grid" class="button mb">Toggle grid</button>
+        <div class="reset mb">
+          <div class="reset-input">
+            <button id="clear" class="button">Clear</button>
+            <input type="range" name="range" id="range" max="60" min="1" />
+          </div>
+          <p class="reset-p">Size: 30 x 30</p>
+        </div>
+      </div>
       <div class="container"></div>
     </div>
   </body>
